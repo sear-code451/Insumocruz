@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@500&family=PT+Mono&family=Roboto+Mono:wght@300;500;700&display=swap');
+
+:root {
+    /* Sources */
+    --sourceMain : 'Roboto', sans-serif;
+    --sourceText : 'Raleway', sans-serif;
+    --sourceSecundary : 'Roboto Mono', monospace ;
+    --sourceNumber : 'PT Mono', monospace;
+    --sourceLogo : 'Noto Sans SC', sans-serif;
+    --sourceInter : 'Inter', sans-serif;
+
+    /* Colors */
+    --secondaryColor: #293DB9;
+    --mainColor: #72C109;
+}  
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+
+
