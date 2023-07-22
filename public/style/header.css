@@ -1,18 +1,19 @@
 
-/* tag: header */
-.content-header {
+/* ? tag: header */
+.content-navbar1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 25px 0 0 0;
 }
 
-/* tag: Logo */
+/* ? tag: Logo */
 .content-logo .logo-img {
-    width: 180px;
+    width: 12rem;
+    height: auto;
 }
 
-/* tag: search */
+/* ? tag: search */
 .container-search {
     display: flex;
     align-items: center;
@@ -58,7 +59,7 @@
     width: 20px;
 }
 
-/* tag: social networks */
+/* ? tag: social networks */
 .content-social-networks {
     background-color: var(--secondaryColor);
     padding: 5px 10px;
@@ -83,17 +84,89 @@
     color: white;
 }
 
-.content-social-networks ul li .size-networks {
-    color: white;
-}
-
-.content-social-networks ul li .size-networks {
-    color: white;
-}
-
 .content-social-networks ul li .size-networks:hover {
     transition: 0.5s;
     color: var(--mainColor);
 }
 
+.menu-navbar .option-menu a {
+    color: white;
+}
+
+/* ? navbar2 - navbar menu */
+
+.content-navbar2 {
+    background-color: var(--mainColor);
+    margin: 20px 0;
+    padding: 17px;
+}
+
+/* * ul menu-navbar */
+
+.menu-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.option-menu {
+    list-style: none;
+}
+
+.option-menu a {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    color: white;
+    padding: 5px;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.option-menu a::before, .option-menu a::after  {
+    position: absolute;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-color: var(--secondaryColor);
+    transform: scaleX(0);
+    transition: 0.5s;
+    z-index: -1;
+}
+.option-menu a::before {
+    top: 0;
+    transform-origin: left;
+    border-radius: 7px 7px 0 0;
+}
+
+.option-menu a::after {
+    top: 50%;
+    transform-origin: right;
+    border-radius: 0 0 7px 7px;
+}
+
+/* hover option-menu : a  */
+
+.option-menu a:hover::before {
+    transform: scaleX(1);
+}
+
+.option-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ? button - navbar */
+
+.content-menu-nav {
+    display: none;
+}
+
+/* ? button-menu-navbar */
+
+.button-menu-navbar {
+    display: none;
+}
 
