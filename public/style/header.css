@@ -93,6 +93,10 @@
     color: white;
 }
 
+.custom-size-icons {
+    font-size: 25px !important;
+}
+
 /* ? navbar2 - navbar menu */
 
 .content-navbar2 {
