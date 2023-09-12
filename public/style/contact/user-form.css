@@ -1,0 +1,225 @@
+
+
+/* Page contact */
+
+.contact_form{  
+    width: 500px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: #F8F6F4;
+    padding-left: 30px; 
+    border: 3px solid var(--mainColor);
+    box-shadow: 7px 13px 37px #000;
+}
+  
+  
+.paragraph-knowledge input{
+  background-color: transparent; 
+  color: #0F0E0E;
+  font-size: 14px;
+  width: 408px; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: var(--mainColor); 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+
+label{
+  display: block; 
+  float: center;  
+}
+
+
+.formulario #enviar{
+  height: 45px; 
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px; 
+  margin-top: 10px;   
+  text-transform: uppercase;
+  background-color: transparent;
+  border: var(--mainColor) solid 2px;
+  border-radius: 10px;  
+  width: 420px;   
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.formulario #enviar:hover{
+  border: var(--colorPhosphorescent) solid 2px;
+  transition: 0.5s;
+}
+
+.formulario button p{
+  color: var(--secondaryColor);
+}
+
+.content-label {
+  font-family: var(--sourceText);
+  font-size: 18px;
+}
+
+.obligatorio {
+  color: var(--mainColor);
+}
+
+
+.aviso{
+  font-family: var(--sourceSecundary);
+  font-size: 13px;  
+  color: var(--secondaryColor);
+}
+
+
+.contact_form h1{
+  font-size: 30px;  
+  text-align: letf; 
+  padding-bottom: 20px; 
+  color: var(--secondaryColor);
+  font-family: var(--sourceText);
+}
+
+
+.contact_form h3{
+  font-size: 12px; 
+  padding-bottom: 30px;
+  color: var(--secondaryColor);   
+  font-family: var(--sourceSecundary);
+}
+
+
+.paragraph-knowledge {
+  font-size: 14px; 
+  color: var(--secondaryColor); 
+}
+
+
+::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+
+
+::-webkit-textarea-placeholder {
+  color: #a8a8a8;
+}
+
+
+.formulario input:focus{
+  outline:0;
+  border: 1px solid var(--colorPhosphorescent) ;
+  transition: 0.5s;
+}
+/* #362FD9 */
+
+
+.formulario textarea:focus{
+  outline:0;
+  border: 1.5px solid var(--colorPhosphorescent);
+  transition: 0.5s;
+}
+
+/* Warning message, how to do error */
+.not-exist {
+  display:  none;
+}
+
+/* Error Message */
+.exist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--sourceSecundary);
+  background-color: #DF2E38;
+  border-radius: 5px;
+  width: 408px;
+  margin: 0 0 10px 0;
+}
+
+/* button Login and received token */
+.access-login {
+display: grid;
+grid-template-columns:repeat(10,1fr) ;
+
+}
+
+/* button: token */
+.access-login .access-option {
+  font-family: var(--sourceSecundary);
+  font-size: 17px;
+  width: 85%;
+  background: transparent;
+  color: var(--secondaryColor);
+  margin: 10px 0;
+  border: 1.5px solid var(--colorSkyBlue);
+  border-radius: 7px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+/* button token: icon the button */
+.custom-icon {
+  color: var(--colorPhosphorescent);
+  transition: 0.5s;
+}
+
+/* Customing the button */
+#button-token {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+#link-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 6;
+  grid-column-end: 9;
+}
+
+
+/* accepted */
+.accepted {
+  background-color: var(--colorPhosphorescent);
+}
+
+.exist p {
+    font-size: 16px;
+    margin: 7px 8px 7px 1px;
+}
+
+.exist .size {
+  font-size: 21px;
+  padding: 2px 13px 2px 14px;
+}
+
+.title-text {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Page data */
+
+.not-uppercase {
+  text-transform: none !important;
+}
+
+.formulario .main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+}
+
+
+
+
