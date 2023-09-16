@@ -1,0 +1,58 @@
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 150px;
+    padding: 20px;
+    margin: 0 0 20px 0 ;
+    background-color: var(--mainColor);
+}
+
+.social-network {
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+.social-network ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-network li {
+    list-style: none;
+    padding: 10px 15px;
+}
+
+.social-network li a {
+    color: white;
+}
+
+.social-network li a:hover {
+    color: var(--secondaryColor);
+    transition: 0.3s;
+}
+
+/* Iconos Redes Sociales */
+
+.social-network ul li a .size {
+    font-size: 23px;
+}
+
+.final-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.final-content p {
+    font-family: var(--sourceSecundary);
+    font-size: 15px;
+    color: white;
+    /* padding: 10px 0 0 0; */
+}
+
