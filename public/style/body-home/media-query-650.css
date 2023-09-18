@@ -1,0 +1,25 @@
+
+@media (max-width:650px) {
+    .slider-simple {
+        height: 330px;
+    }
+
+    .slider-simple .content-image {
+        height: 11rem;
+    }
+
+    .content-image .tranding-slide-img img {
+        height: 220px;
+        width: 300px;
+    }
+}
+
+@media (max-width:500px) {
+    #content-container {
+        padding: 0 20px;
+    }
+
+    .container {
+        padding: 0;
+    }
+}

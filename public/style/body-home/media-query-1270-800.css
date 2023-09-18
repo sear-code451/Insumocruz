@@ -1,0 +1,26 @@
+
+@media (max-width:1270px) {
+    /* * img slider offers */
+    .not-exist-img {
+        display: none;
+    }
+}
+
+@media (max-width:800px) {
+    .slider-simple {
+        height: 450px;
+    }
+
+    .slider-simple .content-image {
+        height: 14rem;
+    }
+
+    .content-img-slider1 {
+        padding: 10px 7px;
+    }
+
+    .content-image .tranding-slide-img img {
+        height: 350px;
+        width: 400px;
+    }
+}
