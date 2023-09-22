@@ -4,6 +4,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const { callDB } = require('../DB/config');
+const hbs = require('hbs');
 
 
 // Proccess
@@ -12,6 +13,11 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.path = '/';
+        this.path_user = '/user';
+        this.path_partials = process.env.PATH_PARTIALS;
+
+        this.app.set('view engine', 'hbs');
+        hbs.registerPartials(this.path_partials);
 
         // Activate the method
         this.connectionDB();
@@ -27,10 +33,15 @@ class Server {
         // Public local directory
         this.app.use( express.static('public') );
 
+        this.app.use( express.urlencoded({
+            extended: true
+        }) );
+
     }
 
     routes() {
         this.app.use( this.path, require('../router/login-home') );
+        this.app.use( this.path_user, require('../router/login-user') );
     }
 
     async connectionDB() {

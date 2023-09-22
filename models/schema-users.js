@@ -1,12 +1,13 @@
 
 // ? Requires -> Mongoose
 const { Schema, model } = require('mongoose');
+// const bcrypt = require('bcryptjs');
 
 // ? Schema User -> mongoDB
 const schemaUser = Schema({
-    name: {
+    user_name: {
         type: String,
-        required: [true, 'The name is required.']
+        required: [true, 'The user name is required.']
     },
 
     email: {
@@ -16,10 +17,19 @@ const schemaUser = Schema({
     },
 
     password: {
-        type: Number,
+        type: String,
         required: [true, 'The password is required.']
     }
 });
+
+// schemaUser.pre('save', function(next) {
+//     bcrypt.genSalt().then( salts => {
+//         bcrypt.hash(this.password, salts).then( hash => {
+//             this.password = hash;
+//             next();
+//         }).catch( error => next(error) );
+//     } ).catch(error => next(error));
+// })
 
 // ? Exports
 module.exports = model('Insumocruz_User', schemaUser);
