@@ -28,17 +28,24 @@
     <div class="contact_form">
 
         <div class="formulario">      
-            <h1>Tú Cuenta</h1>
-            <h3>puedes cambiar los datos que quieras</h3>
+            <h1>Sign In</h1>
+            <h3>Introduce los datos de tu cuenta</h3>
       
       
-            <form action="http://localhost:8000/sign-login" method="post" id="contact-form">
+            <form action="/verify-account" method="post" id="contact-form">
+
+                    <p class="paragraph-knowledge">
+                        <label for="nombre" class="content-label">Nombre de Usuario
+                          <span class="obligatorio">*</span>
+                        </label>
+                        <input type="text" name="user_name" id="nombre" required="obligatorio" placeholder="Escribe tu nombre de usuario">
+                    </p>
                 
                 <p class="paragraph-knowledge">
                     <label for="email" class="content-label">
                         Email
                     </label>
-                    <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email" value="">
+                    <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
                 </p>
                 
                 <p class="paragraph-knowledge">
@@ -48,14 +55,9 @@
                     <input type="text" name="password" id="password" placeholder="Change the password">
                 </p>
                 
-                <div class="exist accepted" id="error-message" >
-                    <i class="fa-sharp fa-light fa-circle-check size"></i>
-                    <p>
-                        <span class="title-text">ERROR:</span>{{data_error}}
-                    </p>
-                </div>
+                {{> account_page/messageResult}}
                 
-                <button type="submit" name="enviar" id="enviar"><p>Guardar cambios</p></button>
+                <button type="submit" name="enviar" id="enviar" value="verify-account"><p>Buscar</p></button>
                 
             </form>
         </div>  

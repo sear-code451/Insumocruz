@@ -5,10 +5,13 @@ const Insumocruz_User = require('../models/schema-users');
 const bcrypt = require('bcryptjs');
 const { generateJWT } = require('../helpers/generate-jwt');
 const jwt = require('jsonwebtoken');
+const {
+    normal,
+    listCorrect,
+} = require('../helpers/variables');
 
 // ? Main-Page -> API -> GET
 const dataGet = ( req = request, res = response) => {
-    // res.sendFile( 'C:/Users/pablo/OneDrive/Escritorio/SECOND-PROJECT/public/html/index.html' );
     res.status(200).render('pages-html/main');
 } ;
 
@@ -29,10 +32,10 @@ const dataPut = async( req = request, res = response ) => {
 
 // ? Account-Page -> API -> GET
 const accountGet = (req = request, res = response) => {
-    res.status(200).render('pages-html/account');
+    res.status(200).render('pages-html/account', normal);
 }
 
-// ? form-new-account -> API -> POST
+// Account-page -> API -> POST
 const formPost = async( req = request, res = response ) => {
     console.log(req.body);
     const { user_name, email, password } = req.body;
@@ -58,19 +61,20 @@ const formPost = async( req = request, res = response ) => {
     // Save DB
     await newUser.save();
 
-
     // Response
-    res.status(200).json({
-        list,
-        decoded
-    })
+    res.status(200).render('pages-html/account', listCorrect);
 
 }
+
+const contactGet = (req = request, res = response) => {
+    res.status(200).render('pages-html/contact')
+};
 
 // Export
 module.exports = {
     dataGet,
     accountGet,
     dataPut,
-    formPost
+    formPost,
+    contactGet
 }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ? Links CSS -->
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/header/header.css">
+        <link rel="stylesheet" href="../style/header/media-query-950px.css">
+        <link rel="stylesheet" href="../style/header/media-query-800px.css">
+        <link rel="stylesheet" href="../style/footer.css">
+        <link rel="stylesheet" href="../style/account-user/body.css">
+        <!-- ? scripts -->
+        <!-- From inside documents -->
+        <script defer src="../js/header/button-nav-menu.js"></script>
+    
+        <!-- From outside -->
+        <script src="https://kit.fontawesome.com/9674d29b4d.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Insumocruz</title>
+    </head>
+<body>
+
+    {{> general/header}}
+
+    <section class="section-user">
+        <div class="container">
+            <div class="contactinfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        
+                        <li>
+                            <span>
+                                <i class="icon_user_info fa-solid fa-map-location-dot"></i>
+                            </span>
+                            <span>Barrio Héroes del Chaco<br>
+                                Calle 4 junio<br>
+                            Santa Cruz de la Sierra</span>
+                        </li>
+
+                        <li>
+                            <span>
+                                <i class="icon_user_info fa-solid fa-envelope-circle-check"></i>
+                            </span>
+                            <span>Lorem@ipsum.com</span>
+                        </li>
+
+                        <li>
+                            <span>
+                                <i class="icon_user_info fa-solid fa-phone"></i>
+                            </span>
+                            <span>310-386-1623</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <ul class="sci">
+                    
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f icon icon_user_info"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-whatsapp icon icon_user_info"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram icon icon_user_info"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+
+                <div class="formBox">
+                    
+                    <div class="inputBox w50">
+                        <input type="text" title="Name" required>
+                        <span>First Name</span>
+                    </div>
+
+                    <div class="inputBox w50">
+                        <input type="text" title="Last-Name" required>
+                        <span>Last Name</span>
+                    </div>
+
+                    <div class="inputBox w50">
+                        <input type="text" title="Email" required>
+                        <span>Email Address</span>
+                    </div>
+
+                    <div class="inputBox w100">
+                        <textarea name="" title="texttarea" required></textarea>
+                        <span>Write your message here...</span>
+                    </div>
+
+                    <div class="inputBox w100">
+                        <input type="submit"  value="Send">
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+    </section>
+
+    {{> general/footer}}
+</body>
+</html>

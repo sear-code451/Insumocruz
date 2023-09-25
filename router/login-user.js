@@ -14,5 +14,5 @@ router.get( '/', userDataGet );
 
 
 // ? Export
-module.exports = router
+module.exports = router;
 

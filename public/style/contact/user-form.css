@@ -37,7 +37,7 @@ label{
   float: center;  
 }
 
-
+/* * button enviar or send */
 .formulario #enviar{
   height: 45px; 
   padding-left: 5px;
@@ -58,10 +58,32 @@ label{
   transition: 0.5s;
 }
 
-.formulario button p{
-  color: var(--secondaryColor);
+/* * button sign or entrar */
+.sign-in {
+  font-family: var(--sourceSections);
+  font-weight: 700;
+  background-color: var(--mainColor);
+  max-width: 90px;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  border: var(--mainColor) solid 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
+.sign-in a {
+  color: var(--white-slider);
+  font-size: 17px;
+  text-decoration: none;
+}
+
+
+/* * button general -> p */
+#enviar p{
+  color: var(--secondaryColor);
+}
+/*  */
 .content-label {
   font-family: var(--sourceText);
   font-size: 18px;
@@ -193,6 +215,7 @@ grid-template-columns:repeat(10,1fr) ;
 }
 
 .exist p {
+  font-family: var(--sourceSecundary);
     font-size: 16px;
     margin: 7px 8px 7px 1px;
 }

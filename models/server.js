@@ -13,7 +13,8 @@ class Server {
         this.app = express();
         this.port = process.env.PORT;
         this.path = '/';
-        this.path_user = '/user';
+        this.path_account_verify = '/verify-account';
+        this.path_account_user = '/user';
         this.path_partials = process.env.PATH_PARTIALS;
 
         this.app.set('view engine', 'hbs');
@@ -41,7 +42,8 @@ class Server {
 
     routes() {
         this.app.use( this.path, require('../router/login-home') );
-        this.app.use( this.path_user, require('../router/login-user') );
+        this.app.use( this.path_account_verify, require('../router/verify-account') );
+        this.app.use( this.path_account_user, require('../router/login-user') );
     }
 
     async connectionDB() {
