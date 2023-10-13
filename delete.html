@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- ? Links CSS -->
+        <link rel="stylesheet" href="/public/style/style.css">
+        <link rel="stylesheet" href="/public/style/header/header.css">
+        <link rel="stylesheet" href="/public/style/header/media-query-950px.css">
+        <link rel="stylesheet" href="/public/style/header/media-query-800px.css">
+        <link rel="stylesheet" href="/public/style/footer.css">
+        <link rel="stylesheet" href="/public/style/contact/user-form.css">
+        <link rel="stylesheet" href="/public/style/user/user.css">
+        
+        <!-- ? scripts -->
+        <!-- From inside documents -->
+        <script defer src="/public/js/header/button-nav-menu.js"></script>
+        <script defer src="/public/js/user/user.js"></script>
+    
+        <!-- From outside -->
+        <script src="https://kit.fontawesome.com/9674d29b4d.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>Insumocruz</title>
+    </head>
+<body>
+
+    <header class="content-header">
+
+        <div class="content-navbar1">
+
+            <div class="content-logo">
+                <a href="/">
+                    <img class="logo-img" src="/public/img/logo-final.png" alt="company-logo">
+                </a>
+            </div>
+    
+            <div class="container-search">
+                <form action="https://www.google.com/webhp" method="get" class="search-bar">
+                    <input type="text" placeholder="search anything" name="4" class="input-search">
+                    <button type="submit" title="button-submit" class="button-search">
+                        <img src="/public/img/search.png" alt="-search-image">
+                    </button>
+                </form>
+            </div>
+    
+            <div class="content-social-networks">
+                <ul>
+                    <li>
+                        <a href="#" title="facebook">
+                            <i class="fa-brands fa-facebook size-networks"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="whatsapp">
+                            <i class="fa-brands fa-whatsapp size-networks"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" title="icon-sesion">
+                            <i class="fa-solid fa-user custom-size-icons size-networks"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" title="trolley-shoppins">
+                            <i class="fa-sharp fa-cart-shopping custom-size-icons size-networks"></i>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="button-menu-navbar">
+                <a href="#" title="icon-nav-menu" onclick= navMenu()>
+                    <i class="fa-solid fa-bars icon-nav icon-menu-nav"></i>
+                </a>
+
+                <a href="#" title="icon-sesion">
+                    <i class="fa-solid fa-user icon-menu-nav"></i>
+                </a>
+                
+                <a href="#" title="trolley-shoppins">
+                    <i class="fa-sharp fa-cart-shopping icon-menu-nav"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="content-navbar2">
+            <ul class="menu-navbar">
+                <li class="option-menu">
+                    <a href="">Productos</a>
+                </li>
+                <li class="option-menu">
+                    <a href="">Novedades</a>
+                </li>
+                <li class="option-menu">
+                    <a href="">Ofertas</a>
+                </li>
+                <li class="option-menu">
+                    <a href="/contact">Contáctanos</a>
+                </li>
+                <li class="option-menu">
+                    <a href="/account">Cuenta</a>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="content-menu-nav">
+            <ul id="list-menu-nav">
+                
+                <li class="option-menu button-navMenu">
+                    <a href="#">Productos</a>
+                </li>
+                
+                <li class="option-menu button-navMenu">
+                    <a href="#">Novedades</a>
+                </li>
+                
+                <li class="option-menu button-navMenu">
+                    <a href="#">Ofertas</a>
+                </li>
+                
+                <li class="option-menu button-navMenu">
+                    <a href="/contact">Contáctanos</a>
+                </li>
+                
+                <li class="option-menu button-navMenu">
+                    <a href="/account">Cuenta</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- ?User-form -->
+    <div class="contact_form">
+
+        <div class="formulario">      
+        <h1>Tú Cuenta</h1>
+        <h3>puedes cambiar los datos que quieras</h3>
+
+        <button type="submit" name="enviar" class="enviar" id="change" value="authorization" onclick=completed_button()><p>Cambiar datos</p></button>
+      
+        <form action="pabloaguilartrd045@gmail.com" method="post" id="contact-form">
+            <p class="paragraph-knowledge">
+                <label for="nombre" class="content-label">
+                    Nombre de Usuario
+                </label>
+                <input type="text" name="user_name" id="nombre" required="obligatorio" placeholder="Escribe tu nombre de usuario" value="pablo">
+            </p>
+            
+            <p class="paragraph-knowledge">
+                <label for="email" class="content-label">
+                    Email
+                </label>
+                <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email" value="pab002@gmail.com">
+            </p>
+            
+            <p class="paragraph-knowledge">
+                <label for="password" class="content-label">
+                    Password
+                </label>
+                <input type="text" name="password" id="password" placeholder="Change the password" value="1234">
+            </p>
+            
+            <div class="" id="error-message" >
+                <i class=""></i>
+                <p>
+                    <span class="title-text"></span>
+                </p>
+            </div>
+            <button type="submit" name="enviar" class="enviar" id="enviar" value="user"><p>Guardar cambios</p></button>
+        </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-network">
+            <ul>
+                <li>
+                    <a title="facebook" href="#">
+                        <i class="fa-brands fa-github size"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="linkdIn" href="#">
+                        <i class="fa-brands fa-linkedin-in size"></i>
+                    </a>
+                </li>
+                <li>
+                    <a title="google" href="#">
+                        <i class="fa-brands fa-google size"></i>
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+
+        <div class="final-content">
+            <p>
+                Para mantenerse en contacto presione cualquiera de los iconos.
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

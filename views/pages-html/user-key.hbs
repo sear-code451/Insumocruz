@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -28,36 +28,20 @@
     <div class="contact_form">
 
         <div class="formulario">      
-            <h1>Sign In</h1>
-            <h3>Introduce los datos de tu cuenta</h3>
+            <h1>Clave de acceso</h1>
       
-      
-            <form action="/verify-account" method="post" id="contact-form">
+            <form action="/user/user-key" method="post" id="contact-form">
 
                 <p class="paragraph-knowledge">
-                    <label for="nombre" class="content-label">Nombre de Usuario
+                    <label for="key" class="content-label">Clave de acceso
                         <span class="obligatorio">*</span>
                     </label>
-                    <input type="text" name="user_name" id="nombre" required="obligatorio" placeholder="Escribe tu nombre de usuario">
-                </p>
-                
-                <p class="paragraph-knowledge">
-                    <label for="email" class="content-label">
-                        Email
-                    </label>
-                    <input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                </p>
-                
-                <p class="paragraph-knowledge">
-                    <label for="password" class="content-label">
-                        Password
-                    </label>
-                    <input type="text" name="password" id="password" placeholder="Change the password">
+                    <input type="text" name="key" id="nombre" required="obligatorio" placeholder="Escribe la clave que se envió por email">
                 </p>
                 
                 {{> account_page/messageResult}}
                 
-                <button type="submit" name="enviar" class="enviar" id="enviar" value="verify-account"><p>Buscar</p></button>
+                <button type="submit" name="enviar" class="enviar" id="enviar" value="user-key"><p>Enviar</p></button>
                 
             </form>
         </div>

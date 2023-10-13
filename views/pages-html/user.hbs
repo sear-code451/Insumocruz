@@ -10,9 +10,12 @@
         <link rel="stylesheet" href="../style/header/media-query-800px.css">
         <link rel="stylesheet" href="../style/footer.css">
         <link rel="stylesheet" href="../style/contact/user-form.css">
+        
         <!-- ? scripts -->
         <!-- From inside documents -->
         <script defer src="../js/header/button-nav-menu.js"></script>
+        <script defer src="../js/user/user.js"></script>
+
     
         <!-- From outside -->
         <script src="https://kit.fontawesome.com/9674d29b4d.js" crossorigin="anonymous"></script>
@@ -28,16 +31,18 @@
     <div class="contact_form">
 
         <div class="formulario">      
-            <h1>Tú Cuenta</h1>
-            <h3>puedes cambiar los datos que quieras</h3>
-      
-            <div>
-                {{> user/datas}}
+        <h1>Tú Cuenta</h1>
+        <h3>puedes cambiar los datos que quieras</h3>
 
-                <button type="submit" name="enviar" id="enviar" value="user"><p>Guardar Cambios</p></button>
-                
-            </div>
-        </div>  
+        <button type="submit" name="enviar" class="enviar" id="change" value="authorization" onclick=completed_button()>
+            <p>Cambiar datos</p>
+        </button>
+
+        <form action="/user" method="post" id="contact-form">
+            {{> user_page/datas}}
+            <button type="submit" name="enviar" class="enviar" id="enviar" value="user"><p>Guardar cambios</p></button>
+        </form>
+        </div>
     </div>
 
     {{> general/footer}}

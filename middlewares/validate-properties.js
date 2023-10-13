@@ -1,17 +1,25 @@
 
 // ? Requires
+// Librery
 const { response,request } = require('express');
 const { validationResult } = require('express-validator');
-const { listIncorrect } = require('../helpers/variables');
+// Our Files
+const {
+    listIncorrect,
+    userData_incorrect
+} = require('../helpers/variables');
 
 // ? Process
 const validateProperties = async(req = request, res = response, next) => {
     let listErrors = validationResult(req);
 
     if( !listErrors.isEmpty() ) {
-        listIncorrect.data_error = listErrors.errors[0].msg;
-        console.log(listIncorrect.data_error);
         // Response the Page Account
+        listIncorrect.data_error = listErrors.errors[0].msg;
+        userData_incorrect.data_error = listErrors.errors[0].msg;
+        console.log(listIncorrect.data_error);
+        console.log(userData_incorrect.data_error);
+
         if( req.body.enviar === 'account' ) {
             console.log('Incorrect in validate-properties account')
             return res.status(400).render('pages-html/account', listIncorrect);
@@ -20,6 +28,17 @@ const validateProperties = async(req = request, res = response, next) => {
         if( req.body.enviar === 'verify-account' ) {
             console.log('Incorrect in validate-properties verify account')
             return res.status(400).render('pages-html/verify-account', listIncorrect);
+        }
+
+        if( req.body.enviar === 'user' ) {
+            console.log('Incorrect in validate-properties user');
+            return res.status(400).render('pages-html/user', userData_incorrect);
+            // TODO: averiguar por que no se muestran los errores
+        }
+
+        if( req.body.enviar === 'user-key' ) {
+            console.log('Incorrect in the user-key validate-properties');
+            return res.status(400).render('pages-html/user-key', listIncorrect);
         }
 
     }

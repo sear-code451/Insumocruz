@@ -1,0 +1,72 @@
+.formulario #save_change{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: transparent;
+    border: var(--mainColor) solid 2px;
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .formulario #save_change:hover{
+    border: var(--colorPhosphorescent) solid 2px;
+    transition: 0.5s;
+  }
+  
+  /* * button sign or entrar */
+  /* .sign-in {
+    font-family: var(--sourceSections);
+    font-weight: 700;
+    background-color: var(--mainColor);
+    max-width: 90px;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    border: var(--mainColor) solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+  } */
+
+  #save_change p{
+    color: var(--secondaryColor);
+  }
+
+  /* <div class="contact_form">
+
+  <div class="formulario">
+      <h1>Tú Cuenta</h1>
+      <h3>puedes cambiar los datos que quieras</h3>
+
+      <div id="contact-form">
+          {{> user/datas}}
+
+          <button type="submit" name="enviar" id="save_change" value="user" onclick=completed_button()><p>Guardar Cambios</p></button>
+          
+      </div>
+  </div>  
+</div> */
+
+
+/* <div class="contact_form">
+
+<div class="formulario">      
+<h1>Tú Cuenta</h1>
+<h3>puedes cambiar los datos que quieras</h3>
+
+
+    <form action="/user" method="post" id="contact-form">
+
+        {{> user_page/datas}}
+        
+     {{!-- <button type="submit" name="enviar" id="save_change" value="user" onclick=completed_button()><p>Guardar Cambios</p></button> --}}
+
+        <button type="submit" name="enviar" id="enviar" value="user"><p>Buscar</p></button>
+        
+    </form>
+</div>
+</div> */

@@ -20,6 +20,12 @@ const schemaUser = Schema({
     password: {
         type: String,
         required: [true, 'The password is required.']
+    },
+
+    change: {
+        user_name: { type: String },
+        email: { type: String },
+        password: { type: String }
     }
 });
 

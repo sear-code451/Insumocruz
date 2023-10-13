@@ -30,10 +30,34 @@ const listIncorrect = {
     data_error: data_correct
 }
 
-const userData = {
+const userData_normal = {
     user_name: '',
     email: '',
-    password: ''
+    password: '',
+    class_content_result: 'not-exist',
+    icon_message_result: icon_message_correct,
+    result_message: result_message_correct,
+    data_error: data_correct
+}
+
+const userData_correct = {
+    user_name: '',
+    email: '',
+    password: '',
+    class_content_result: 'exist accepted',
+    icon_message_result: icon_message_correct,
+    result_message: result_message_correct,
+    data_error: data_correct
+}
+
+const userData_incorrect = {
+    user_name: '',
+    email: '',
+    password: '',
+    class_content_result: 'exist',
+    icon_message_result: icon_message_incorrect,
+    result_message: result_message_incorrect,
+    data_error: data_correct
 }
 
 //? Export
@@ -41,6 +65,8 @@ module.exports = {
     listCorrect,
     listIncorrect,
     normal,
-    userData
+    userData_correct,
+    userData_incorrect,
+    userData_normal
 };
 

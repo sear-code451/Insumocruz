@@ -38,7 +38,7 @@ label{
 }
 
 /* * button enviar or send */
-.formulario #enviar{
+.formulario .enviar{
   height: 45px; 
   padding-left: 5px;
   padding-right: 5px;
@@ -53,7 +53,7 @@ label{
   transition: 0.5s;
 }
 
-.formulario #enviar:hover{
+.formulario .enviar:hover{
   border: var(--colorPhosphorescent) solid 2px;
   transition: 0.5s;
 }
@@ -80,7 +80,7 @@ label{
 
 
 /* * button general -> p */
-#enviar p{
+.enviar p{
   color: var(--secondaryColor);
 }
 /*  */
@@ -241,6 +241,10 @@ grid-template-columns:repeat(10,1fr) ;
   justify-content: center;
   align-items: center;
   width: 95%;
+}
+
+#change-data {
+  display: none;
 }
 
 
