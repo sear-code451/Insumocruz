@@ -1,4 +1,7 @@
 
+// ? Requires
+const bcrypt = require('bcryptjs');
+
 // ? Variables Generals
 let data_correct = 'Created successfully.';
 let icon_message_incorrect = 'fa-solid fa-triangle-exclamation size';
@@ -34,6 +37,7 @@ const userData_normal = {
     user_name: '',
     email: '',
     password: '',
+    email_guard: '',
     class_content_result: 'not-exist',
     icon_message_result: icon_message_correct,
     result_message: result_message_correct,
@@ -44,6 +48,7 @@ const userData_correct = {
     user_name: '',
     email: '',
     password: '',
+    email_guard: '',
     class_content_result: 'exist accepted',
     icon_message_result: icon_message_correct,
     result_message: result_message_correct,
@@ -54,11 +59,25 @@ const userData_incorrect = {
     user_name: '',
     email: '',
     password: '',
+    email_guard: '',
     class_content_result: 'exist',
     icon_message_result: icon_message_incorrect,
     result_message: result_message_incorrect,
     data_error: data_correct
 }
+
+const RoundIndex = (index, datas, password) => {
+    if( index === 0 ) return { user_name: datas[index] };
+    if( index === 1 ) return { email: datas[index] };
+    if( index === 2 ) {
+        const salt = bcrypt.genSaltSync();
+        const hash = bcrypt.hashSync( password, salt );
+        return {
+            password: hash     
+        }
+    };
+    // password: datas[index]
+};
 
 //? Export
 module.exports = {
@@ -67,6 +86,7 @@ module.exports = {
     normal,
     userData_correct,
     userData_incorrect,
-    userData_normal
+    userData_normal,
+    RoundIndex
 };
 

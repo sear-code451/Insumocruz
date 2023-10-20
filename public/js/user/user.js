@@ -3,7 +3,7 @@
 let input_user_name = document.getElementById('nombre');
 let input_email = document.getElementById('email');
 let input_password = document.getElementById('password');
-let input_change_data = document.getElementById('send-data');
+let input_change_data = document.getElementById('email_guard');
 let button_click = document.getElementById('change');
 
 // ?
@@ -12,6 +12,7 @@ const completed_button = async() => {
     const user_name = input_user_name.value;
     const email = input_email.value;
     const password = input_password.value;
+    const email_guard = input_change_data.value ;
     const button = button_click.value;
 
     
@@ -44,6 +45,7 @@ const completed_button = async() => {
                 user_name,
                 email,
                 password,
+                email_guard,
                 enviar: button
             })
     

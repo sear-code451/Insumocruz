@@ -23,9 +23,9 @@ const schemaUser = Schema({
     },
 
     change: {
-        user_name: { type: String },
-        email: { type: String },
-        password: { type: String }
+        user_name_stub: { type: String },
+        email_stub: { type: String },
+        password_stub: { type: String }
     }
 });
 

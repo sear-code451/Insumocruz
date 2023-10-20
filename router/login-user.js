@@ -19,6 +19,7 @@ const {
     userNameExist,
     passwordExist,
     verifyJWT,
+    verifyChangeData,
 } = require('../middlewares/db-validators');
 
 
@@ -31,14 +32,15 @@ router.get( '/', userDataGet );
 
 // API -> POST
 router.post('/', [
-    // Body -> user_name
-    // check('user_name').custom(userNameExist),
-    check('user_name', 'There has to be a name.').not().isEmpty(),
-    check('user_name', 'The name can have a minimum of 3 characters.').isLength({ min: 3 }),
     // Body -> email
     // check('email').custom(emailExists),
     check('email', 'There has to be a email.').not().isEmpty(),
     check('email', 'It has to have the charateristics of an email.').isEmail(),
+    // Body -> user_name
+    // check('user_name').custom(userNameExist),
+    check('user_name', 'There has to be a name.').not().isEmpty(),
+    check('user_name', 'The name can have a minimum of 3 characters.').isLength({ min: 3 }),
+    check('user_name').custom(verifyChangeData),
     // Body -> password
     check('password', 'The password not should be empty.').not().isEmpty(),
     check('password').custom(isTypeString),
