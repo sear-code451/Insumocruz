@@ -4,7 +4,8 @@
   "description": "the practice project",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "start": "node app"
   },
   "author": "Pablo RA",
   "license": "MIT",
