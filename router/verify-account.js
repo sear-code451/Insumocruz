@@ -20,8 +20,8 @@ const {validateProperties} = require('../middlewares/validate-properties');
 const router = Router();
 
 // ? API -> GET
-router.get( '/', verifyDataGet );
-router.post('/', [
+router.get( '/verify-account', verifyDataGet );
+router.post('/verify-account', [
     // Body -> user-name 
     check('user_name').custom(userNameNotExist),
     check('user_name', 'There has to be a name.').not().isEmpty(),

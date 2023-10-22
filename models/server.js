@@ -42,8 +42,8 @@ class Server {
 
     routes() {
         this.app.use( this.path, require('../router/login-home') );
-        this.app.use( this.path_account_verify, require('../router/verify-account') );
-        this.app.use( this.path_account_user, require('../router/login-user') );
+        this.app.use( this.path, require('../router/verify-account') );
+        this.app.use( this.path, require('../router/login-user') );
     }
 
     async connectionDB() {

@@ -13,7 +13,10 @@ const {
 
 // ? Main-Page -> API -> GET
 const dataGet = ( req = request, res = response) => {
-    res.status(200).render('pages-html/main');
+    res.status(200).render('pages-html/main', {
+        offers_header: '#offers',
+        novedades_header: '#novedades'
+    });
 } ;
 
 // ? API -> PUT
@@ -68,7 +71,10 @@ const formPost = async( req = request, res = response ) => {
 }
 
 const contactGet = (req = request, res = response) => {
-    res.status(200).render('pages-html/contact');
+    res.status(200).render('pages-html/contact', {
+        offers_header: '/#offers',
+        novedades_header: '/#novedades'
+    });
 };
 
 const contactPost = async(req = request, res = response) => {
@@ -102,8 +108,8 @@ const contactPost = async(req = request, res = response) => {
     // TODO: continue of the work... finish the page-contact with so express-validator 
 
     res.status(200).render('pages-html/contact', {
-        offers_header: 'http://localhost:8000/#offers',
-        novedades_header: 'http://localhost:8000/#novedades'
+        offers_header: '/#offers',
+        novedades_header: '/#novedades'
     });
 };
 

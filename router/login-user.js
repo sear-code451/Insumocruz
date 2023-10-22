@@ -28,10 +28,10 @@ const router = Router();
 
 // ? /user
 // API -> GET
-router.get( '/', userDataGet );
+router.get( '/user', userDataGet );
 
 // API -> POST
-router.post('/', [
+router.post('/user', [
     // Body -> email
     // check('email').custom(emailExists),
     check('email', 'There has to be a email.').not().isEmpty(),
@@ -49,14 +49,14 @@ router.post('/', [
 
 ] , userDataPost);
 
-router.put('/', userDataPut);
+router.put('/user', userDataPut);
 
 // ? /user/token
 // API -> GET
-router.get('/user-key', keyGet);
+router.get('/user/user-key', keyGet);
 
 // API -> POST
-router.post('/user-key', [
+router.post('/user/user-key', [
     check('key', 'There has to be a email.').not().isEmpty(),
     check('key', 'The key can have a minimum of 16 characters. ').isLength({ min: 16 }),
     check('key').custom(isTypeString),
