@@ -13,11 +13,17 @@
         <!-- ? scripts -->
         <!-- From inside documents -->
         <script defer src="../js/header/button-nav-menu.js"></script>
+          <script defer src="../js/body/scroll-smooth.js"></script>
     
         <!-- From outside -->
         <script src="https://kit.fontawesome.com/9674d29b4d.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
         <title>Insumocruz</title>
     </head>
 <body>
@@ -83,35 +89,35 @@
             <div class="contactForm">
                 <h2>Send a Message</h2>
 
-                <div class="formBox">
+                <form action="/contact" method="post" class="formBox">
                     
                     <div class="inputBox w50">
-                        <input type="text" title="Name" required>
+                        <input name="name" type="text" title="Name" required>
                         <span>First Name</span>
                     </div>
 
                     <div class="inputBox w50">
-                        <input type="text" title="Last-Name" required>
+                        <input name="last_name" type="text" title="Last-Name" required>
                         <span>Last Name</span>
                     </div>
 
                     <div class="inputBox w50">
-                        <input type="text" title="Email" required>
+                        <input name="email" type="text" title="Email" required>
                         <span>Email Address</span>
                     </div>
 
                     <div class="inputBox w100">
-                        <textarea name="" title="texttarea" required></textarea>
+                        <textarea name="message" title="texttarea" required></textarea>
                         <span>Write your message here...</span>
                     </div>
 
                     <div class="inputBox w100">
-                        <input type="submit"  value="Send">
+                        <input name="" type="submit"  value="Send">
                     </div>
-                </div>
+                </form>
 
             </div>
-        
+    
         </div>
     </section>
 

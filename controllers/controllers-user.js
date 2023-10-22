@@ -46,14 +46,8 @@ const userDataPost = async(req = request, res = response) => {
         render_result.password = password;
     };
 
-    // Datas
-    // userData_normal.user_name = user_name;
-    // userData_normal.email = email;
-    // userData_normal.password = password;
-
     console.log( { email2: userData_normal.email_guard } );
 
-    
     // TODO: search how change the datas in the DB... FORM -> POST
 
     const cambio = await Insumocruz_User.findOne({ "change.email_stub": userData_normal.email_guard });

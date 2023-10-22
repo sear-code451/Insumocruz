@@ -11,6 +11,8 @@ let result_message_correct = 'Correct: ';
 
 // ? normal
 const normal = {
+    offers_header: '/#offers',
+    novedades_header: '/#novedades',
     class_content_result: 'not-exist',
     icon_message_result: icon_message_correct,
     result_message: result_message_correct,
@@ -19,6 +21,8 @@ const normal = {
 
 // ? Message Correct
 const listCorrect = {
+    offers_header: '/#offers',
+    novedades_header: '/#novedades',
     class_content_result: 'exist accepted',
     icon_message_result: icon_message_correct,
     result_message: result_message_correct,
@@ -34,6 +38,8 @@ const listIncorrect = {
 }
 
 const userData_normal = {
+    offers_header: '/#offers',
+    novedades_header: '/#novedades',
     user_name: '',
     email: '',
     password: '',
@@ -45,6 +51,8 @@ const userData_normal = {
 }
 
 const userData_correct = {
+    offers_header: '/#offers',
+    novedades_header: '/#novedades',
     user_name: '',
     email: '',
     password: '',
@@ -56,6 +64,8 @@ const userData_correct = {
 }
 
 const userData_incorrect = {
+    offers_header: '/#offers',
+    novedades_header: '/#novedades',
     user_name: '',
     email: '',
     password: '',

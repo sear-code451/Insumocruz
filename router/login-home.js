@@ -13,6 +13,7 @@ const {
     accountGet,
     formPost,
     contactGet,
+    contactPost,
 } = require('../controllers/controllers');
 
 
@@ -43,6 +44,10 @@ router.post('/account', [
 
 ], formPost);
 
+
+// ? Rest Server "/contact" -> GET
 router.get('/contact', contactGet);
+
+router.post('/contact', contactPost);
 
 module.exports = router;

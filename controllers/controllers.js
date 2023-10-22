@@ -1,6 +1,7 @@
 
 // Requires
 const { request, response } = require('express');
+const nodemailer = require('nodemailer');
 const Insumocruz_User = require('../models/schema-users');
 const bcrypt = require('bcryptjs');
 const { generateJWT } = require('../helpers/generate-jwt');
@@ -67,7 +68,43 @@ const formPost = async( req = request, res = response ) => {
 }
 
 const contactGet = (req = request, res = response) => {
-    res.status(200).render('pages-html/contact')
+    res.status(200).render('pages-html/contact');
+};
+
+const contactPost = async(req = request, res = response) => {
+    console.log( { body_post_contact: req.body } );
+
+    // ? nodemailer
+    const config = {
+        host: 'smtp.gmail.com',
+        port: process.env.PORT_EMAIL,
+        auth: {
+            user: process.env.FROM,
+            pass: process.env.PASS
+        }
+    };
+
+    const message_nodemailer = {
+        from: req.body.email,
+        to: process.env.TO,
+        subject: `Message of the client: ${req.body.name} ${req.body.last_name}`,
+        text: `
+        The message is sent from ${req.body.email}, that is following:  
+        ${req.body.message}
+        `
+    };
+
+    const transport = nodemailer.createTransport(config);
+    const info = await transport.sendMail(message_nodemailer);
+
+    console.log({send_mail: info});
+
+    // TODO: continue of the work... finish the page-contact with so express-validator 
+
+    res.status(200).render('pages-html/contact', {
+        offers_header: 'http://localhost:8000/#offers',
+        novedades_header: 'http://localhost:8000/#novedades'
+    });
 };
 
 // Export
@@ -76,5 +113,6 @@ module.exports = {
     accountGet,
     dataPut,
     formPost,
-    contactGet
+    contactGet,
+    contactPost
 }
