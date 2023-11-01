@@ -5,6 +5,7 @@ const express = require('express');
 const cors = require('cors');
 const { callDB } = require('../DB/config');
 const hbs = require('hbs');
+const path = require('path');
 
 
 // Proccess
@@ -18,6 +19,10 @@ class Server {
         this.path_partials = process.env.PATH_PARTIALS;
 
         this.app.set('view engine', 'hbs');
+        this.app.set('views', path.resolve(__dirname, 'views'));
+        console.log({
+            message_dir: '../../views'
+        });
         hbs.registerPartials(this.path_partials);
 
         // Activate the method
