@@ -34,9 +34,9 @@ class Server {
         // Public local directory
         this.app.use( express.static('public') );
 
-        this.app.use( express.urlencoded({
-            extended: true
-        }) );
+        // this.app.use( express.urlencoded({
+        //     extended: true
+        // }) );
 
     }
 
