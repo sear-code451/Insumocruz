@@ -18,7 +18,6 @@ class Server {
         this.path_partials = process.env.PATH_PARTIALS;
 
         this.app.set('view engine', 'hbs');
-        this.app.set('views', path.join(__dirname, 'views'));
         hbs.registerPartials(this.path_partials);
 
         // Activate the method
