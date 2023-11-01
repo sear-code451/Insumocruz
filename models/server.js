@@ -19,7 +19,7 @@ class Server {
         this.path_partials = process.env.PATH_PARTIALS;
 
         this.app.set('view engine', 'hbs');
-        this.app.set('views', path.resolve(__dirname, 'views'));
+        this.app.set('views', path.join('./', 'views'));
         console.log({
             message_dir: '../../views'
         });
