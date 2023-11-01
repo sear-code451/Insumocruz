@@ -19,7 +19,7 @@ class Server {
         this.path_partials = process.env.PATH_PARTIALS;
 
         this.app.set('view engine', 'hbs');
-        this.app.set('views', path.join('./', 'views'));
+        this.app.set('views', path.join('../', 'views'));
         console.log({
             message_dir: '../../views'
         });
@@ -39,9 +39,9 @@ class Server {
         // Public local directory
         this.app.use( express.static('public') );
 
-        // this.app.use( express.urlencoded({
-        //     extended: true
-        // }) );
+        this.app.use( express.urlencoded({
+            extended: true
+        }) );
 
     }
 
