@@ -19,8 +19,6 @@ class Server {
         this.path_partials = process.env.PATH_PARTIALS;
 
         const ruta = path.join('/views');
-        const archivo = path.basename(ruta);
-        console.log(archivo);
         this.app.set('view engine', 'hbs');
         this.app.set('views', path.basename(ruta));
 
