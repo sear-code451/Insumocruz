@@ -19,9 +19,14 @@ class Server {
         this.path_partials = process.env.PATH_PARTIALS;
 
         this.app.set('view engine', 'hbs');
-        this.app.set('views', path.join('.\views'));
+        this.app.set('views', path.basename(ruta));
+
+        const ruta = path.join('/views');
+        const archivo = path.basename(ruta);
+        console.log(archivo);
+
         console.log({
-            message_dir: this.app.set('views', path.join('.\views'))
+            message_dir: this.app.set('views', path.basename(ruta))
         });
         hbs.registerPartials(this.path_partials);
 
