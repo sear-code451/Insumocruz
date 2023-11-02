@@ -18,12 +18,12 @@ class Server {
         this.path_account_user = '/user';
         this.path_partials = process.env.PATH_PARTIALS;
 
-        this.app.set('view engine', 'hbs');
-        this.app.set('views', path.basename(ruta));
-
         const ruta = path.join('/views');
         const archivo = path.basename(ruta);
         console.log(archivo);
+        this.app.set('view engine', 'hbs');
+        this.app.set('views', path.basename(ruta));
+
 
         console.log({
             message_dir: this.app.set('views', path.basename(ruta))
