@@ -21,11 +21,6 @@ class Server {
         const ruta = path.join('/views');
         this.app.set('view engine', 'hbs');
         this.app.set('views', path.basename(ruta));
-
-
-        console.log({
-            message_dir: this.app.set('views', path.basename(ruta))
-        });
         hbs.registerPartials(this.path_partials);
 
         // Activate the method
